@@ -1,30 +1,44 @@
-steps:
-  - uses: actions/checkout@v4
+name: Test Favicon Action
 
-  - name: Run action (first time — should generate)
-    id: first
-    uses: andreia/generate-favicons@v1
-    with:
-      image:   assets/logo.svg
-      preset:  all
-      force:   "false"
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force regeneration?"
+        default: "false"
+        type: choice
+        options: ["false", "true"]
 
-  - run: echo "skipped=${{ steps.first.outputs.skipped }}, files=${{ steps.first.outputs.files_generated }}"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-  - name: Run action (second time — should skip)
-    id: second
-    uses: andreia/generate-favicons@v1
-    with:
-      image:   assets/logo.svg
-      preset:  all
-      force:   "false"
+      - name: Run action (first time — should generate)
+        id: first
+        uses: andreia/generate-favicons@v1
+        with:
+          image:   assets/logo.svg
+          preset:  all
+          force:   "false"
 
-  - run: |
-      [[ "${{ steps.second.outputs.skipped }}" == "true" ]] \
-        && echo "✅ Skip logic works" \
-        || { echo "❌ Should have been skipped"; exit 1; }
+      - run: echo "skipped=${{ steps.first.outputs.skipped }}, files=${{ steps.first.outputs.files_generated }}"
 
-  - uses: actions/upload-artifact@v4
-    with:
-      name: test-favicons
-      path: public/favicons/
+      - name: Run action (second time — should skip)
+        id: second
+        uses: andreia/generate-favicons@v1
+        with:
+          image:   assets/logo.svg
+          preset:  all
+          force:   "false"
+
+      - run: |
+          [[ "${{ steps.second.outputs.skipped }}" == "true" ]] \
+            && echo "✅ Skip logic works" \
+            || { echo "❌ Should have been skipped"; exit 1; }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: test-favicons
+          path: public/favicons/

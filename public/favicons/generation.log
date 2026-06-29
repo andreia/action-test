@@ -1,0 +1,99 @@
+[1m────────────────────────────────────────────────────────────[0m
+[1m  🖼️   Favicon Generator[0m
+[1m────────────────────────────────────────────────────────────[0m
+[0;36m▶  Source image : assets/logo.svg[0m
+[0;36m▶  Format       : svg  (SVG=true, renderer=inkscape)[0m
+[0;36m▶  Preset       : all[0m
+[0;36m▶  Sizes (px)   : 16 24 32 48 57 60 64 70 72 76 96 114 120 128 144 150 152 167 180 192 196 256 310[0m
+[0;36m▶  Background   : #ffffff[0m
+[0;36m▶  Output dir   : public/favicons[0m
+[0;36m▶  Force regen  : false[0m
+[1m────────────────────────────────────────────────────────────[0m
+[0;36m▶  Rendering PNG files…[0m
+  PNG   16x16    →  favicon-16x16.png
+  PNG   24x24    →  favicon-24x24.png
+  PNG   32x32    →  favicon-32x32.png
+  PNG   48x48    →  favicon-48x48.png
+  PNG   57x57    →  favicon-57x57.png
+  PNG   60x60    →  favicon-60x60.png
+  PNG   64x64    →  favicon-64x64.png
+  PNG   70x70    →  favicon-70x70.png
+  PNG   72x72    →  favicon-72x72.png
+  PNG   76x76    →  favicon-76x76.png
+  PNG   96x96    →  favicon-96x96.png
+  PNG  114x114   →  favicon-114x114.png
+  PNG  120x120   →  favicon-120x120.png
+  PNG  128x128   →  favicon-128x128.png
+  PNG  144x144   →  favicon-144x144.png
+  PNG  150x150   →  favicon-150x150.png
+  PNG  152x152   →  favicon-152x152.png
+  PNG  167x167   →  favicon-167x167.png
+  PNG  180x180   →  favicon-180x180.png
+  PNG  192x192   →  favicon-192x192.png
+  PNG  196x196   →  favicon-196x196.png
+  PNG  256x256   →  favicon-256x256.png
+  PNG  310x310   →  favicon-310x310.png
+  PNG 310×150 (Metro wide)  →  mstile-310x150.png
+[0;32m✔  PNG rendering complete.[0m
+[0;36m▶  Optimising PNGs with optipng…[0m
+[0;32m✔  Optimisation complete.[0m
+[0;36m▶  Building favicon.ico…[0m
+  ICO  →  favicon.ico  (layers: favicon-16x16.png favicon-24x24.png favicon-32x32.png favicon-48x48.png favicon-64x64.png favicon-128x128.png favicon-256x256.png)
+[0;32m✔  favicon.ico created.[0m
+[0;36m▶  Creating opaque tile variants for Windows Metro / IE…[0m
+  mstile 70×70  →  mstile-70x70.png
+  mstile 144×144  →  mstile-144x144.png
+  mstile 150×150  →  mstile-150x150.png
+  mstile 310×310  →  mstile-310x310.png
+[0;32m✔  Opaque tile variants created.[0m
+[0;36m▶  Writing browserconfig.xml…[0m
+[0;32m✔  browserconfig.xml written.[0m
+[0;36m▶  Writing site.webmanifest…[0m
+[0;32m✔  site.webmanifest written.[0m
+[0;36m▶  Writing favicon-snippet.html…[0m
+[0;32m✔  favicon-snippet.html written.[0m
+[1m────────────────────────────────────────────────────────────[0m
+[1m  📦  Output Summary[0m
+[1m────────────────────────────────────────────────────────────[0m
+
+  Files generated:     33
+  Total size:          292K
+  Output directory:    /home/runner/work/action-test/action-test/public/favicons
+
+  .gitkeep                                       0 KB
+  browserconfig.xml                              4 KB
+  favicon-114x114.png                            4 KB
+  favicon-120x120.png                            4 KB
+  favicon-128x128.png                            4 KB
+  favicon-144x144.png                            4 KB
+  favicon-150x150.png                            4 KB
+  favicon-152x152.png                            4 KB
+  favicon-167x167.png                            8 KB
+  favicon-16x16.png                              4 KB
+  favicon-180x180.png                            8 KB
+  favicon-192x192.png                            8 KB
+  favicon-196x196.png                            8 KB
+  favicon-24x24.png                              4 KB
+  favicon-256x256.png                            8 KB
+  favicon-310x310.png                           12 KB
+  favicon-32x32.png                              4 KB
+  favicon-48x48.png                              4 KB
+  favicon-57x57.png                              4 KB
+  favicon-60x60.png                              4 KB
+  favicon-64x64.png                              4 KB
+  favicon-70x70.png                              4 KB
+  favicon-72x72.png                              4 KB
+  favicon-76x76.png                              4 KB
+  favicon-96x96.png                              4 KB
+  favicon-snippet.html                           4 KB
+  favicon.ico                                  108 KB
+  mstile-144x144.png                             8 KB
+  mstile-150x150.png                             8 KB
+  mstile-310x150.png                            12 KB
+  mstile-310x310.png                            12 KB
+  mstile-70x70.png                               4 KB
+  site.webmanifest                               4 KB
+
+[1m────────────────────────────────────────────────────────────[0m
+[0;32m[1m  ✅  Done! All favicons written to: public/favicons/[0m
+[1m────────────────────────────────────────────────────────────[0m

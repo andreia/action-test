@@ -2,12 +2,9 @@ name: Test Favicon Action
 
 on:
   workflow_dispatch:
-    inputs:
-      force:
-        description: "Force regeneration?"
-        default: "false"
-        type: choice
-        options: ["false", "true"]
+
+permissions:
+  contents: write
 
 jobs:
   test:
@@ -22,6 +19,7 @@ jobs:
           image:   assets/logo.svg
           preset:  all
           force:   "false"
+          commit:  "true"
 
       - run: echo "skipped=${{ steps.first.outputs.skipped }}, files=${{ steps.first.outputs.files_generated }}"
 
